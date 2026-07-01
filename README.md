@@ -142,7 +142,8 @@ document.getElementById("hasil").innerHTML =
 
 # praktikum 2
 
-<img width="1080" height="1049" alt="181030" src="https://github.com/user-attachments/assets/ba80c1f6-31c2-47a3-94d5-a9bf75250c50" />
+<img width="1080" height="1011" alt="181069" src="https://github.com/user-attachments/assets/2918b7ee-2108-4c30-bdf3-030a86384b07" />
+
 
 
 <!DOCTYPE html>
