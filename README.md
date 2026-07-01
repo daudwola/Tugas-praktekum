@@ -360,3 +360,126 @@ function hitung(){
 
 </body>
 </html>
+
+# praktekum 4
+
+
+![181062](https://github.com/user-attachments/assets/f36c90f2-1e27-4539-b930-caa04f7fcc31)
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Praktikum #4</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f2f2f2;
+        }
+
+        .container {
+            background: white;
+            width: 320px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 17px;
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 8px 20px;
+            font-size: 16px;
+        }
+
+        #status {
+            margin-top: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Hitung BMI</h2>
+
+<label>Berat Badan (kg):</label>
+<input type="number" id="berat">
+
+
+<label>Tinggi Badan (cm):</label>
+<input type="number" id="tinggi">
+
+
+<button onclick="hitungBMI()">Cek</button>
+
+
+<label>Status:</label>
+<input type="text" id="status" readonly>
+
+
+</div>
+
+
+<script>
+
+function hitungBMI(){
+
+    let berat = document.getElementById("berat").value;
+    let tinggi = document.getElementById("tinggi").value;
+
+
+    // ubah cm ke meter
+    tinggi = tinggi / 100;
+
+
+    let bmi = berat / (tinggi * tinggi);
+
+
+    let hasil;
+
+
+    if(bmi < 18.5){
+        hasil = "Kurus";
+    }
+    else if(bmi >= 18.5 && bmi < 25){
+        hasil = "Normal";
+    }
+    else if(bmi >= 25 && bmi < 30){
+        hasil = "Gemuk";
+    }
+    else{
+        hasil = "Obesitas";
+    }
+
+
+    document.getElementById("status").value =
+    hasil + " (BMI: " + bmi.toFixed(2) + ")";
+
+}
+
+</script>
+
+
+</body>
+</html>
