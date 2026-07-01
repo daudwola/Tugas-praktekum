@@ -1,115 +1,133 @@
 # PRAKTIKUM 1 Kalkulator foto copy 
 
+<img width="1080" height="969" alt="181011" src="https://github.com/user-attachments/assets/8262854c-7bf5-4dc8-a7b7-84618f8321d2" />
 
-<img width="1080" height="1156" alt="180973" src="https://github.com/user-attachments/assets/511f6308-e6f0-4630-b443-21c5f87f3910" />
 
-
-Codingan 
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kalkulator Fotocopy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Fotocopy</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            padding: 20px;
-        }
+<style>
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+    padding:20px;
+}
 
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 400px;
-            margin: auto;
-            box-shadow: 0 0 10px gray;
-        }
+.container{
+    background:white;
+    width:320px;
+    padding:20px;
+    margin:auto;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
 
-        h2 {
-            text-align: center;
-            color: blue;
-        }
+h2{
+    text-align:center;
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 16px;
-        }
+input{
+    width:95%;
+    padding:10px;
+    margin:10px 0;
+    font-size:16px;
+}
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background: blue;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-        }
+button{
+    width:100%;
+    padding:10px;
+    background:blue;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+}
 
-        .hasil {
-            margin-top: 20px;
-            padding: 15px;
-            background: #e8f5e9;
-            border-radius: 10px;
-        }
-    </style>
+.hasil{
+    margin-top:20px;
+    background:#e8f5e9;
+    padding:15px;
+    border-radius:8px;
+}
+</style>
+
 </head>
 
 <body>
 
+
 <div class="container">
 
-<h2>Program Fotocopy</h2>
+<h2>Harga Fotocopy</h2>
 
-<p>Masukkan jumlah lembar fotocopy:</p>
+<p>Jumlah lembar fotocopy:</p>
 
-<input type="number" id="lembar" placeholder="Contoh: 168">
+<input type="number" id="lembar" placeholder="Masukkan jumlah lembar">
 
-<button onclick="hitung()">Hitung Harga</button>
+
+<button onclick="proses()">Proses</button>
 
 
 <div class="hasil" id="hasil">
-    Hasil akan muncul di sini
+Hasil muncul disini
 </div>
 
 
 </div>
+
 
 
 <script>
 
-function hitung(){
+function proses(){
 
-    let jumlah = document.getElementById("lembar").value;
+let jumlah = document.getElementById("lembar").value;
 
-    let harga;
-    let total;
-
-
-    if(jumlah < 100){
-        harga = 150;
-    }
-    else if(jumlah <= 200){
-        harga = 100;
-    }
-    else{
-        harga = 80;
-    }
+let harga;
+let total;
 
 
-    total = jumlah * harga;
+// kondisi If Else
 
+if(jumlah < 100){
 
-    document.getElementById("hasil").innerHTML =
-    "Jumlah lembar : " + jumlah + " lembar <br>" +
-    "Harga per lembar : Rp " + harga + 
-    "<br>Total bayar : Rp " + total;
+    harga = 150;
 
 }
+
+else if(jumlah >= 100 && jumlah <= 200){
+
+    harga = 100;
+
+}
+
+else{
+
+    harga = 80;
+
+}
+
+
+// menghitung biaya
+
+total = jumlah * harga;
+
+
+
+document.getElementById("hasil").innerHTML =
+
+"Jumlah fotocopy : " + jumlah + " lembar <br>" +
+
+"Harga per lembar : Rp " + harga + "<br>" +
+
+"Total biaya : Rp " + total;
+
+
+}
+
 
 </script>
 
