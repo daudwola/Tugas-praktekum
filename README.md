@@ -1,6 +1,7 @@
 # PRAKTIKUM 1 Kalkulator foto copy 
 
-<img width="1080" height="969" alt="181011" src="https://github.com/user-attachments/assets/8262854c-7bf5-4dc8-a7b7-84618f8321d2" />
+![181065](https://github.com/user-attachments/assets/7c2bfc94-20c4-4530-97d9-03bc17b19ae8)
+
 
 
 
